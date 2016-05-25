@@ -1,0 +1,37 @@
+var botTurn = function(){
+ var botPlay = "";   
+ var randomHand = Math.random() * (3 - 1) + 1;   
+ randomHand = Math.round(randomHand)
+ 
+ if(randomHand === 1){
+     botPlay = "Rock";
+ } else if (randomHand === 2){
+     botPlay = "Paper";
+ } else{
+     botPlay = "Scissors";
+ }
+ 
+ return botPlay;
+}
+
+var gamePlay = function(userHand){
+    var botHand = botTurn();
+    
+    console.log("your hand: " + userHand);
+    console.log("opponent hand: " + botHand);
+    
+    if(userHand === "Rock" && botHand === "Scissors" || 
+    userHand === "Scissors" && botHand === "Paper" || 
+    userHand === "Paper" && botHand === "Rock"){
+        console.log("YOU WIN!!");
+    } 
+    else if(userHand === botHand){
+        console.log("it was a tie");
+    }
+    else{
+        console.log("Sorry, you lost!");   
+    }
+    
+}
+
+gamePlay("Paper");
