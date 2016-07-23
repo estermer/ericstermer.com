@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'weathertimeregular';
-    src: url('../weatherIcons/weathertime-webfont.woff2') format('woff2'),
-         url('../weatherIcons/weathertime-webfont.woff') format('woff');
+    src: url('../fonts/weatherIcons/weathertime-webfont.woff2') format('woff2'),
+         url('../fonts/weatherIcons/weathertime-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
