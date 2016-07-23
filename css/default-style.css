@@ -1,0 +1,123 @@
+@font-face {
+    font-family: '3rd_manregular';
+    src: url('../fonts/3rd_man-webfont.woff2') format('woff2'),
+         url('../fonts/3rd_man-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+	-webkit-box-shadow: 0 8px 6px -4px #999;
+    -moz-box-shadow: 0 8px 6px -4px #999;
+    box-shadow: 0 8px 6px -4px #999;
+	background-color: #0F171B;
+	font-family: '3rd_manregular';
+	color: white;
+}
+
+a {color: white;}
+
+a:hover {
+    color: #4889AA;
+    text-decoration: none;
+}
+
+#navbar {
+	padding-top: 15px;	
+	font-size: 48px;
+}
+
+#logo {
+	font-size: 60px;
+}
+
+#construction {
+	text-align: center;
+	margin-top: 150px;
+}
+
+#jsfiddle-links {
+	text-align: center;
+	margin-top: 150px;
+}
+
+
+#me {
+	margin-top: 270px;
+	margin-left: 100px;
+	height: 500px;
+	border-radius: 50%;
+
+}
+
+h1 {
+	font-family: '3rd_manregular';
+	font-size: 100px;
+	color: #0F171B;
+}
+
+h2 {
+	font-family: '3rd_manregular';
+	font-size: 60px;
+	color: #0F171B;
+}
+
+#about {
+	margin-top: 150px;
+	margin-left: 100px;
+	color: #5A6055;
+}
+
+#container {
+	width: 1000px;
+    margin: 0 auto;
+}
+
+/******Projects*******************/
+
+.thumb {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.row {
+	margin-top: 25px;
+}
+
+/*******contact style***********/
+
+label {
+    display:block;
+    letter-spacing:2px;
+}
+
+input, textarea {
+	width:439px;
+	height:40px;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+}
+
+input:focus, textarea:focus {
+    border:1px solid #97d6eb;
+}
+
+#message {
+	height: 250px;
+}
+
+#submit {
+    width:127px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+	#submit:hover {
+	    opacity:.9;
+	}

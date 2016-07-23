@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Office Status Widget</title>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/widget.css">
+  <script src="js/widget.js"></script>
+</head>
+<body>
+  <div class="grid-container centered">
+    <div class="grid-100">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="heading">
+            <h1>Corporate Intranet</h1>
+          </div>
+        </div>
+        <section class="grid-70 main">
+          <h2>AJAX Request Practice</h2>
+          <p>The widget to the right is a widget created to practice using an AJAX request to a JSON object and manipulating the information to display the employees name, and whether based on the JSON information the employee is in the office or out of the office, display a box that shows that. The idea is that if this was an updated JSON object, the widget would be updated dynamically. Here is the JavaScript Code:</p>
+          <pre><code class="code">
+				var xhr = new XMLHttpRequest();//create xmlhttprequest object
+
+				//create onsteadystatechange callback function
+				xhr.onreadystatechange = function() {
+				  if(xhr.readyState === 4 &amp;&amp; xhr.status === 200){
+				    var employees = JSON.parse(xhr.responseText);
+				    var employeeListDiv = document.getElementById('employeeList');
+				    var statusHTML = document.createElement('ul');
+				    statusHTML.classList.add('bulleted');
+				    employeeListDiv.appendChild(statusHTML);
+				    console.log(employeeListDiv);
+				    
+				    for (var i = 0; i &lt; employees.length; i++){
+				      
+				      //create &lt;li&gt; element for the first employee
+				      var employee = document.createElement('li');
+				      var employeeName = document.createTextNode(employees[i]["name"]);
+				      employee.appendChild(employeeName);
+				      
+				      
+				      if(employees[i]["inoffice"]){
+				      //add &lt;li class="in"&gt;
+				        employee.classList.add('in');
+				      }else{
+				      //add &lt;li class="out"&gt;
+				        employee.classList.add('out');
+				      }
+				      
+				      //append &lt;li&gt; element to &lt;ul&gt;
+				      statusHTML.appendChild(employee);
+				    }
+				    
+				  }
+				};
+
+				//open and send request
+				xhr.open('GET', 'data/employees.json');
+				xhr.send();
+
+
+			//Solution: Post a List of Employees in the sidebar with their work status
+
+			//send a request to the JSON data of employees
+
+			//create a &lt;ul class="bulleted"&gt; of those employees
+			</code></pre>
+			<p>I have also completed this project using AJAX request through jQuery. Here is the code for that:</p>
+			<pre><code class="code">
+			$.getJSON('../data/employees.json', function(json){
+
+			  $('#employeeList').html('&lt;ul class="bulleted"&gt;&lt;/ul&gt;');
+			  var employees = "";
+			  
+			  for(var i = 0; i &lt; json.length; i++){
+			    var name = json[i]["name"];
+			    var inoffice = json[i]["inoffice"];
+			    var status = '';
+			    
+			    if(inoffice){
+			      status = 'in';
+			    } else{
+			      status = 'out';
+			    }
+			    
+			    var employee = '&lt;li class="' + status + '"&gt;' + name + '&lt;/li&gt;';
+			    employees += employee;
+			    
+			  }
+			  $('.bulleted').html(employees);
+			  
+			});
+			</code></pre>
+          
+        </section>
+        
+        
+        
+        <aside class="grid-30 list">
+          <h2>Employee Office Status</h2>
+          <div id="employeeList">
+
+            
+          </div>
+        </aside>
+        
+        
+        
+        
+        <footer class="grid-100">
+          <p>Copyright, The Intranet Corporation</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

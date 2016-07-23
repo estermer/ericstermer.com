@@ -1,0 +1,68 @@
+body {
+	background-color: #3D8EB9;
+}
+
+
+input#myInp[type="text"] {
+   
+    width: 220px;
+    box-sizing: border-box;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #FFF;
+    background-image: url("http://www.w3schools.com/howto/searchicon.png");
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    
+}
+
+/* When the input field gets focus, change its width to 100% */
+input#myInp[type="text"]:focus {
+    width: 100%;
+}
+
+.container {
+	margin-top: 50px;
+}
+
+#searchDisplay {
+	margin-top: 50px;
+	width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+	box-sizing: border-box;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+    background-color: #FFF;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 12px 20px 12px 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#random:link,
+#random:visited,
+#random:hover,
+#random:active {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+	text-shadow: 2px 2px 8px black;
+	font-family: 'Lilita One', cursive;
+	color: white;
+	font-size: 100px;
+}
+
