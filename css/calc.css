@@ -27,8 +27,7 @@ body {
 
 #numbers {
   text-align: right;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 10px 12px 10px 12px;
 }
 .button {
   font-family: 'Play', sans-serif;
