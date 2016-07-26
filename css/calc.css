@@ -1,44 +1,65 @@
 body {
-	background-color: #4889AA;
+  font-family: 'Play', sans-serif;
 }
 
-#calc {
-	margin: 0 auto;
-	margin-top: 100px;
-	width: 250px;
-	height: 300px;
-	-webkit-box-shadow: inset 0px 0px 54px -1px rgba(0,0,0,0.67);
-	-moz-box-shadow: inset 0px 0px 54px -1px rgba(0,0,0,0.67);
-	box-shadow: inset 0px 0px 35px -1px rgba(0,0,0,0.67);
-	border-radius: 20px;
-}
-
-#user-interface {
-	margin: 0 auto;
-}
-
-span {
-	margin-top: 5px;
-	margin-left:
+#calculator {
+  margin: 0 auto;
+  margin-top: 50px;
+  background: #e7e7e7;
+  width: 300px;
+  height: 400px;
+  border-radius: 5%;
+  padding: 20px 20px 20px 20px;
+  -webkit-box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.50), 0px 0px 38px 0px rgba(0,0,0,0.90);
+  -moz-box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.50), 0px 0px 38px 0px rgba(0,0,0,0.90);
+  box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.50), 0px 0px 38px 0px rgba(0,0,0,0.90);
 }
 
 #display {
-	border-style: solid;
-	border-width: .5px;
-	height: 30px;
-	width: 205px;
-	margin: 20px;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  background: #f6f6f6;
+  border-radius: 8px;
+  border-style: solid;
+  margin-bottom: 25px;
 }
 
-.btn {
-	width: 50px;
+#numbers {
+  text-align: right;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.button {
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+  background: #333;
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  width: 20%;
+  margin-left: 2%;
+  margin-right: 2%; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  box-shadow: 0 2px black;
+}
+.button:active {
+  transform: translateY(1px);
 }
 
-.row {
-	margin: 0 auto;
+.button:hover {
+  cursor: grab;
 }
 
-.header {
-	color: #C0D1D4;
-	text-align: center;
+#enter {
+  width: 44%;
+  background: #87D37C;
 }
+
+#clear {
+  background: #EC644B;
+}
+
