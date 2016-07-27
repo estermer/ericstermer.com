@@ -27,9 +27,10 @@ body {
 
 #numbers {
   text-align: right;
-  margin: 10px 12px 10px 12px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.button {
+.button, #enter, .clear{
   font-family: 'Play', sans-serif;
   font-size: 16px;
   background: #333;
@@ -58,7 +59,6 @@ body {
   background: #87D37C;
 }
 
-#clear {
+.clear {
   background: #EC644B;
 }
-
