@@ -40,9 +40,9 @@ function addCardsInPlay() {
 
 
 	if(this.getAttribute('data-card') === 'king'){
-		this.innerHTML = '<img src="img/king.jpg">';
+		this.innerHTML = '<img src="../img/king.jpg">';
 	} else {
-		this.innerHTML = '<img src="img/queen.jpg">';
+		this.innerHTML = '<img src="../img/queen.jpg">';
 	}
 
 	cardsInPlay.push(this);
