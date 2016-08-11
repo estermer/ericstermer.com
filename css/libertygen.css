@@ -1,0 +1,75 @@
+body {
+  background: #161E31;
+  font-family: garamond, sans-serif;
+  color: white;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 450px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#clear {
+  margin-top: 20px;
+}
+
+#title {
+  text-align: center;
+}
+
+#display {
+  background: white;
+  color: black;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 7px;
+  border-color: red;
+}
+
+.campaign {
+  background: #1C2840;
+  width: 100%;
+  margin-top: 25px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  text-align: center;
+  line-height: 30px;
+  
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+li{
+  display: inline;
+  line-height: 20px;
+  margin: 10px;
+}
+li:hover {
+  cursor: grab;
+}
+
+h5 {
+  text-align: center;
+  margin: 0;
+}
+
+p {
+  margin-top: 50px;
+}
+
+.button {
+  margin-top: 3px;
+}
+
+
+/*div background color - 
