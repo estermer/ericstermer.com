@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  margin: -20px;
+  background-color: #ddd;
+  text-align: center;
+  padding: .5em;
+}
+
+#title {
+  font-size: 50px;
+}
+
+#section {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+button {
+  width: 32%;
+  font-size: 24px;
+  color: white;
+  border: solid black .1px;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.clock-type {
+  background-color: #4B77BE;
+  font-size: 15px;
+  width: 23%;
+}
+
+#start {
+  background-color: #00B16A;
+}
+
+#stop {
+  background-color: #E74C3C;
+}
+
+#reset {
+  color: black;
+}
+
+#timer {
+  text-align: center;
+  font-size: 40px;
+}
+
+footer {
+  margin: 50px;
+  text-align: center;
+}

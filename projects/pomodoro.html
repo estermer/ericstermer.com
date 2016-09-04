@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="../css/pomodoro.css" media="screen" title="no title" charset="utf-8">
+    <script src="../js/pomodoro.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1 id="title">Pomodoro Clock</h1>
+      <h4>AKA Tomato Clock</h4>
+    </header>
+
+    <div id="section">
+      <div id="clock-type">
+        <button class="clock-type" onclick="initializePomodoro()">Pomodoro</button>
+        <button class="clock-type" onclick="initializeShortBreak()">Short-Break</button>
+        <button class="clock-type" onclick="initializeLongBreak()">Long-Break</button>
+        <button class="clock-type" onclick="initializeCustom()">Custom Time</button>
+      </div>
+
+      <div id="timer">
+        <h1 val="pomodoro"><span id="minutes">25</span>:<span id="seconds">00</span></h1></h1>
+      </div>
+
+      <div id="buttons">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+    <footer>
+      <p> Created by: Eric Stermer</p>
+    </footer>
+
+
+  </body>
+</html>
