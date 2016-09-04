@@ -88,6 +88,22 @@ window.onload = function() {
     }
   }
 
+  /******INITIALIZE COUNTER LENGTH BUTTONS*****/
+
+  //pomodoro
+  document.getElementsByClassName('clock-type')[0].addEventListener('click', initializePomodoro);
+
+  //short break
+  document.getElementsByClassName('clock-type')[1].addEventListener('click', initializeShortBreak);
+
+  //long break
+  document.getElementsByClassName('clock-type')[2].addEventListener('click', initializeLongBreak);
+
+  //custom
+  document.getElementsByClassName('clock-type')[3].addEventListener('click', initializeCustom);
+
+  /***************************************/
+
   /******START STOP and RESET BUTTONS*****/
 
   //start
