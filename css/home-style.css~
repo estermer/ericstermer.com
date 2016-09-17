@@ -1,0 +1,61 @@
+@font-face {
+    font-family: '3rd_manregular';
+    src: url('../fonts/3rd_man-webfont.woff2') format('woff2'),
+         url('../fonts/3rd_man-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#homescreen {
+	font-family: '3rd_manregular', Times, serif;
+	color: white;
+	text-align: center;
+	margin-top: -20px;
+    background-color: #0F171B;
+    max-width: 70%;
+    min-width: 450px;
+    padding-top: 50px;
+    box-shadow: 0px 1px 16px 8px rgba(50, 50, 50, 0.76);
+    margin: 0 auto;
+    height:100vh;
+
+}
+
+h1 {
+    font-size:  150px;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 48px;
+    word-spacing: 20px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+    color: #4889AA;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+img {
+    max-width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*filter: grayscale(100%);*/
+}
+
+.slider {
+    margin: 0 auto;
+}
+
+@media (max-width: 900px){
+  h1 {
+    font-size: 90px
+  }
+  h3 {
+    font-size: 34px;
+  }
+}

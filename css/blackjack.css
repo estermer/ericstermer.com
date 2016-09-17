@@ -1,0 +1,304 @@
+/*Style Sheet for BlackJack-GA Unit 1 Project*/
+/*Created by Eric Stermer*/
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/********RESPONSIVE SECTIONS***********/
+
+@media screen and (min-width: 1100px){
+  .wrapper {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .wrapperTwo {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .section:nth-of-type(1) {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .wrapperTwo > .section:nth-of-type(2) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
+
+  p {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 30vw;
+  }
+
+}
+
+@media screen and (max-width: 1100px){
+  .section:nth-of-type(1) {
+    width: 100vmax;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section > div:nth-of-type(1) > h1{/*Title*/
+    font-size: 80px;
+  }
+  .section > div {
+    margin:20px;
+  }
+
+  .wrapperTwo {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .wrapperTwo > .section {
+    width: 50vmax;
+  }
+
+  .wrapperTwo > .section:nth-of-type(2) {
+    display: flex;
+    flex-flow: column ;
+    justify-content: space-around;
+  }
+
+  p {
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50vw;
+  }
+
+}
+/***************************************************/
+
+.section {
+  display: block;
+  text-align: center;
+  height: 100vh;
+  width: 32vw;
+}
+
+/***********HEADER/TITLE and INSTRUCTIONS*************/
+h1 {
+  font-size: 5vmax;
+  margin: 0;
+  letter-spacing: 15px;
+}
+h1 > span, h3 > span {
+  color: red;
+}
+
+#jack {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+h3 {
+  margin-top: 20px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+
+/************************************/
+
+/***************Buttons*****************/
+
+#play-buttons > button, #start-button {
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#start-button {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  border-color: red;
+
+}
+#play-buttons, #bet-buttons {
+  height: 165px;
+  width: 60px;
+}
+
+#play-buttons > button, #bet-buttons > button {
+  display: block;
+}
+
+#bet-buttons > button {
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#play-buttons > button {
+  width: 70px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+/***************************************/
+
+/************GAME CONTROLS AND DISPLAY************/
+
+#game-display, #bank-display {
+  background-color: rgba(149,165,166, .5);
+  width: 25vmax;
+  height: 7vmax;
+  padding: 5px;
+  line-height: 7vmax;
+  margin: 0 auto;
+}
+#game-display > span, #bank-display > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+#game-controls{
+  display: flex;
+  justify-content: center;
+}
+
+#deck, .card, .deck-card {
+  height: 110px;
+  width: 80px;
+  border-radius:5px;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.75);
+}
+
+#deck {
+  margin-top: 30px;
+  position: relative;
+}
+
+.deck-card {
+  top: 0px;
+  left: -10px;
+  position: absolute;
+}
+
+#bank-display {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+/*************************************************/
+
+/*****************USER and DEALER HANDS**************/
+
+#dealer-hand, #player-hand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dealer-hand > div, #player-hand > div {
+  margin: 2px;
+}
+
+#dealer-hand, #player-hand, #game-feedback {
+  margin: 0;
+  width: 100%;
+  height: 40%;
+  background-color: #c0392b;
+}
+
+#game-feedback {
+  height: 19%;
+  width: 97.6%;
+  line-height: 100px;
+  border: 5px solid white;
+}
+#game-feedback > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  font-weight: bolder;
+  font-size: 20px;
+
+}
+
+/****************************************************/
+
+/******CSS ANIMATION OF CARDS BEING SHUFFLED*********/
+/****need to add and remove class for these on the card***/
+
+.deal-card-player {
+  animation-name: dealPlayer;
+  animation-timing-function: linear;
+  animation-duration: .4s;
+}
+
+.deal-card-dealer {
+  animation-name: dealDealer;
+  animation-timing-function: linear;
+  animation-duration: .4s;
+}
+
+.begin-flip-card {
+  animation-name: beginFlip;
+  animation-timing-function: linear;
+  animation-duration: .4s;
+}
+
+.end-flip-card {
+  animation-name: endFlip;
+  animation-timing-function: linear;
+  animation-duration: .4s;
+}
+
+@keyframes beginFlip {
+  0% {-webkit-transform: rotateY(0deg); transform: rotateY(0deg);}
+  35% {-webkit-transform: rotateY(90deg); transform: rotateY(90deg);}
+  100% {-webkit-transform: rotateY(90deg); transform: rotateY(90deg);}
+}
+
+@keyframes endFlip {
+  0% {-webkit-transform: rotateY(90deg); transform: rotateY(90deg);}
+  35% {-webkit-transform: rotateY(90deg); transform: rotateY(90deg);}
+  100% {-webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
+}
+
+/*need to move down and left*/
+@keyframes dealPlayer {
+  0% {top: 0px; left: -10px;}
+  100% {top: 200px; left: -350px; -webkit-transform: rotate(380deg)}/*return back to starting position instantly*/
+}
+
+/*needs to move up and left*/
+@keyframes dealDealer {
+  0% {top: 0px; left: -10px;}
+  100% {top: -200px; left: -350px; -webkit-transform: rotate(380deg)}/*return back to starting position instantly*
+}
+
+/****************************************************/

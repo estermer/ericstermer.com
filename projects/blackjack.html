@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Black Jack</title>
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../css/blackjack.css" media="screen" title="no title" charset="utf-8">
+    <script src="../js/blackjack.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <div class='section'>
+
+        <div>
+
+          <h1>BL<span>A</span>CK</h1>
+          <h1 id="jack"><span>J</span>ACK</h1>
+
+        </div>
+
+        <div>
+
+          <button id="start-button">START</button>
+
+        </div>
+
+        <div>
+
+          <h3>INSTR<span>U</span>CTIONS</h3>
+
+          <p>
+            1. Press 'START' to begin a new game <br>2. If you wish to bet  $50, place it before you hit deal
+            <br>3. Press 'HIT' to get another card <br>4. Press 'STAY' if you wish to end your turn
+            <br>5. If your feeling good about your hand you can press 'DD' to double down just before you
+            finish your turn <br>6. DOUBLE DOWN will not only double your bet, but will be as though you hit stay
+            <br>7. Avoid going over 21 or you BUST <br>8. An ace and a face card is a 'BLACK JACK' which is an automatic win
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="wrapperTwo">
+
+        <div class='section'>
+
+          <div id='dealer-hand'>
+
+          </div>
+
+          <div id='game-feedback'>
+
+            <!-- <span>WELCOME TO THE GAME OF BLACK JACK</span> -->
+
+          </div>
+
+          <div id='player-hand'>
+
+          </div>
+
+        </div>
+
+        <div class='section'>
+
+            <div id="game-display">
+
+              <!-- <span>GAME DISPLAY</span> -->
+
+            </div>
+
+            <div id="game-controls">
+
+              <div id="deck">
+                <div class="deck-card" style='z-index: 1'><img class='deck-card' src="img/cardback.jpg" alt="card back" /></div>
+                <div id="deal-card" class="deck-card" style='z-index: 2'><img class='deck-card' src="img/cardback.jpg" alt="card back" /></div>
+              </div>
+
+              <div id='play-buttons'>
+
+                <button id="deal" type="button">DEAL</button>
+                <button id="hit" type="button">HIT</button>
+                <button id="stay" type="button">STAY</button>
+
+              </div>
+
+              <div id="bet-buttons">
+
+                <button id="bet" type="button">BET</button>
+                <button id="dd" type="button">DD</button>
+
+              </div>
+
+            </div>
+
+            <div id="bank-display">
+
+              <!-- <span>BANK DISPLAY</span> -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+    </div>
+
+  </body>
+</html>

@@ -2,40 +2,69 @@
 // Copyright (C) 2016 Matt Brendzel under the GNU General Public License.
 // See LICENSE for details.
 
-var timerUI = {
-  drawNumericDisplay: function(timerValue){
-    // Your Code Here
-    var numberDisplay = document.getElementById('numeric-display');
-    numberDisplay.innerHTML = timerValue;
-  },
-  drawProgressBars: function(timerValue){
-    // Your Code Here
-    var progressBar = document.getElementsByClassName('progress-bar')[0];
-    progressBar.style.width = timerValue + '%';
-  },
-  drawLitFuses: function(timerValue){
-    // Your Code Here
-    var flame = document.getElementsByClassName('flame')[0];
-    var unburnt = document.getElementsByClassName('unburnt')[0];
-    var burnt = document.getElementsByClassName('burnt')[0];
-    burnt.style.width = -1 * (timerValue - 100) + '%';
-    unburnt.style.width = timerValue - 2 + '%';
 
-  },
-  drawCrawlers: function(timerValue){
-    // Your Code Here
-    var crawlerTrack = document.getElementsByClassName('crawler-track')[0];
-    var crawler = document.getElementsByClassName('crawler')[0];
+/**********JS and jQuery Updated and Refactored by Eric Stermer*********/
+$(function(){
 
-    crawler.style.marginLeft = -12 * (timerValue - 100) + 'px';
+var App = {
 
-    if(timerValue%2 !== 0){
-      crawlerTrack.style.paddingTop = '5px';
-      crawlerTrack.style.paddingBottom = '0px';
-    } else {
-      crawlerTrack.style.paddingTop = '0px';
-      crawlerTrack.style.paddingBottom = '5px';
+  index: 0,
+
+  counterList: [],
+
+  incrementCounter: function(dataIndex){
+    //update underlying data
+    for(var i = 0; i < this.counterList.length; i++){
+      if(this.counterList[i].indexId === dataIndex){
+        this.counterList[i].count++;
+        return this.counterList[i].count;
+      }
     }
+  },
 
-  }
+  createCounterHTML: function(){
+    // Create new element
+    var $newCounter = $('<div></div>').addClass('counter').data('index', this.index);
+    $newCounter.html('<h3>Count: <span>0</span></h3><button> +1 </button><button> Delete Counter </button>');
+
+    //put new counter in counterList array
+    this.counterList.push({indexId: App.index, count: 0});
+    this.index++;
+
+    //event handlers
+    UI.createEventHandlers($newCounter);
+
+    // Change UI by inserting new counter into page
+    $('#counter-list').append($newCounter);
+  },
+
 };
+
+var UI = {
+
+  addNewCounter: function(){
+    App.createCounterHTML();
+  },
+
+  createEventHandlers: function($newCounter){
+    $newCounter.children().eq(1).on('click', function(){
+      var i = Number($newCounter.data('index'));
+      // Change UI
+      $newCounter.find('span').html(App.incrementCounter(i));
+    });
+
+    $newCounter.children().eq(2).on('click', function(){
+      var i = Number($newCounter.data('index'));
+      // Change UI
+      $newCounter.remove();
+    });
+  }
+
+  // plusOne:
+  //
+  // deleteCounter:
+};
+
+  //create new counter on click
+  $('#new-counter').on('click', UI.addNewCounter);
+});
