@@ -1,3 +1,5 @@
+![Banner](/img/ESBanner.jpeg)
+
 # www.ericstermer.com
 My Personal Website
 
