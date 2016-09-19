@@ -295,7 +295,7 @@ var UI = {
 
       //make the first card face down
       if(children.length === 0 ){
-        img = 'img/cardback.jpg';
+        img = '../img/cardback.jpg';
       } else {
         img = card.img;
       }
@@ -313,7 +313,7 @@ var UI = {
     var img = gameStats.dealerHand[0].img;
 
     //rotate card by adding a class
-    children[0].innerHTML = '<img class="card begin-flip-card" src="img/cardback.jpg">';
+    children[0].innerHTML = '<img class="card begin-flip-card" src="../img/cardback.jpg">';
 
     var delay = setTimeout(function() {
       //fill ith the card image
